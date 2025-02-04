@@ -1,4 +1,3 @@
-// Navbar.jsx
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
@@ -32,7 +31,7 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
       >
         <a href="/" className="logo">
-          <img src="gymkhana_logo.png" alt="Institute Logo" />
+          <img src="gymkhana_logo.png" alt="Institute Logo" draggable={false}/>
         </a>
 
         {/* Desktop Menu */}
