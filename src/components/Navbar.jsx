@@ -38,7 +38,7 @@ const Navbar = () => {
         <ul className="nav-links desktop-menu">
           <motion.li
             whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 400 }}
+            transition={{ type: "spring", stiffness: 1000 }}
           >
             <a href="/">Home</a>
           </motion.li>

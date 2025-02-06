@@ -2,9 +2,10 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.jsx';
+import Home from '../components/Home';
 ---
 
 <Layout>
 	<Navbar client:load />
-	<Welcome />
+	<Home client:load/>
 </Layout>

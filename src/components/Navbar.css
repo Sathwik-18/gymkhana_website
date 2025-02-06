@@ -4,9 +4,9 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.1) ;
+    background: transparent;
     backdrop-filter: blur(10px);
-    z-index: 1000;
+    z-index: 1500;
     transition: all 0.3s ease;
   }
   
@@ -32,12 +32,12 @@
   }
 
   .logo img:hover {
-      transform: scale(1.1);
-      transition: transform 0.3s ease-in;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in;
   }
 
   .logo img {
-      transition: transform 0.6s ease-out;
+    transition: transform 0.6s ease-out;
   }
   
   .nav-links {
@@ -54,7 +54,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #333;
+    background: #f8f7f7;
     transition: width 0.3s;
   }
 
@@ -67,7 +67,7 @@
   }
   
   .nav-links a, .nav-links span {
-    color: #333;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -77,10 +77,11 @@
   
   .dropdown {
     position: absolute;
-    top: 100%;
-    left: 50%;
+    top: 80%;
+    left: 0%;
     transform: translateX(-50%);
-    background: white;
+    background: linear-gradient(#d2ca2b78, #2041e67e,#1fda3281, #d8242454);
+    background: rgba(255, 252, 252, 0.123);
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
@@ -94,14 +95,14 @@
   }
   
   .dropdown a {
-    color: #666;
+    color: #ffffff;
     display: block;
     padding: 0.5rem;
-    transition: color 0.2s ease;
+    transition: color 0.6s ease;
   }
   
   .dropdown a:hover {
-    color: #333;
+    color: #fdfdfd;
   }
   
   .mobile-menu-btn {
@@ -155,7 +156,9 @@
   .mobile-menu {
     font-family: 'Nasalization Rg';
     display: none;
-    background: white;
+    background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
     padding: 1rem;
     overflow: hidden;
   }
@@ -172,7 +175,7 @@
   }
   
   .mobile-menu a,.mobile-menu span {
-    color: #333;
+    color: #f8f7f7;
     text-decoration: none;
     font-size: 1.1rem;
     display: block;
