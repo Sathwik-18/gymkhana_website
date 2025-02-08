@@ -3,8 +3,8 @@
 body { 
   background-color: #000;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
   overflow-x: hidden; 
 }
@@ -162,7 +162,7 @@ body:not(.blurred)::before {
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
   pointer-events: none;
   transform: translateY(-50%) translateX(15px);
-  border: 2px solid rgba(255, 255, 255, 0.2); 
+  border: 0.8mm ridge var(--line-color);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 0.1) inset; 
   color: #fff;
   z-index: 1600; 
@@ -178,7 +178,6 @@ body:not(.blurred)::before {
   font-weight: bold;
   text-align: center;
 }
-
 
 .council p {
   margin: 0;
@@ -256,6 +255,17 @@ body:not(.blurred)::before {
   width: 150px;
 }
 
+#academic .council-info {
+  left: -520%;
+  top: 30%;
+  width: 280px;
+}
+
+#sports .council-info {
+  left: -520%;
+  top: 50%;
+  width: 280px;
+}
 
 @media (max-width: 768px) {
   .gymkhana-map {

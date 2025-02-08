@@ -17,7 +17,7 @@ const Home = () => {
         <div className="logo-container">
           <img src="gymkhana_logo.png" alt="Gymkhana Logo" className="gymkhana-logo" />
         </div>
-
+        
         <div
           id="science-tech"
           className="council"
@@ -103,6 +103,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+
   );
 };
 
