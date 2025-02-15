@@ -1,11 +1,13 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.jsx';
 import Home from '../components/Home';
+import ClubsCarousel from '../components/ClubsCarousel.jsx';	
+import UpcomingEvents from '../components/UpcomingEvents.jsx';
 ---
 
-<Layout>
-	<Navbar client:load />
+<Layout title="Home">
 	<Home client:load/>
+	<ClubsCarousel client:load/>
+	<UpcomingEvents client:load/>
 </Layout>

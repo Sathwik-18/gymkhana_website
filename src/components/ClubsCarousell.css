@@ -1,0 +1,213 @@
+@import url('https://fonts.cdnfonts.com/css/nasalization');
+.clubs-carousel-container {
+  padding: 40px 20px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+}
+
+.clubs-carousel-container h2 {
+  font-family: 'Nasalization Rg', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.clubs-carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  padding: 40px 0;
+  position: relative;
+  mask-image: linear-gradient(to right, black 0%, black 10%, black 90%, black 100%);
+  -webkit-mask-image: linear-gradient(to right, black 0%, black 10%, black 90%, black 100%);
+}
+
+.carousel-track {
+  display: flex;
+  animation: scrollCarousel 39s linear infinite;
+  width: calc(200px * 78);
+  user-select: none;
+  animation-play-state: running;
+}
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50%));
+  }
+}
+
+.club-card {
+  width: 150px;
+  margin: 0 25px;
+  flex: none;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  filter: blur(1.5px);
+  opacity: 0.7;
+  cursor: pointer;
+  position: relative;
+}
+
+.club-card:first-child,
+.club-card:nth-child(2),
+.club-card:nth-child(3),
+.club-card:nth-child(4) {
+  margin-left: 50px;
+}
+
+.club-card:last-child,
+.club-card:nth-last-child(2),
+.club-card:nth-last-child(3),
+.club-card:nth-last-child(4) {
+  margin-right: 50px;
+}
+
+.club-card:hover {
+  transform: scale(1.4);
+  filter: blur(0);
+  opacity: 1;
+  z-index: 10;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8);
+}
+
+.club-logo-wrapper {
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7) inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.club-logo-image {
+  display: block;
+  width: 90%;
+  height: auto;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.club-card:hover .club-logo-image {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+  outline-offset: -5px;
+}
+
+.club-info-box {
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 1%;
+  left: 110%;
+  width: 200%;
+  height: 80%;
+  background: rgba(18, 17, 17, 0.772);
+  border-radius: 0 0 15px 15px;
+  padding: 0;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  border: 2mm ridge rgba(255, 255, 255, 0.765);
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, height 0.4s ease, padding 0.4s ease;
+}
+
+.club-card:hover .club-info-box {
+  opacity: 1;
+  height: auto;
+  padding: 15px 20px 20px;
+}
+
+.club-name {
+  font-family: 'Nasalization Rg';
+  font-size: 1.1em;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.607);
+}
+
+.club-description {
+  font-size: 0.9em;
+  line-height: 1;
+  color: #eee;
+}
+
+@media (max-width: 768px) {
+  .clubs-carousel-container {
+    padding: 30px 15px;
+  }
+  .clubs-carousel-container h2 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+  }
+  .clubs-carousel {
+    padding: 15px 0;
+  }
+  .club-card {
+    width: 110px;
+    margin: 0 15px;
+  }
+  .club-info-box {
+    width: 100%;
+  }
+  .club-logo-wrapper {
+    height: 110px;
+  }
+  @keyframes scrollCarousel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50%)); }
+  }
+  .club-info-box {
+    padding: 10px 15px;
+    margin-top: 8px;
+  }
+  .club-name {
+    font-size: 1em;
+  }
+  .club-description {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .clubs-carousel-container {
+    padding: 20px 10px;
+  }
+  .clubs-carousel-container h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+  .clubs-carousel {
+    padding: 10px 0;
+  }
+  .club-card {
+    width: 100px;
+    margin: 0 10px;
+  }
+  .club-logo-wrapper {
+    height: 100px;
+  }
+  @keyframes scrollCarousel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50%)); }
+  }
+  .club-info-box {
+    padding: 8px 10px;
+    margin-top: 6px;
+  }
+  .club-name {
+    font-size: 0.95em;
+  }
+  .club-description {
+    display: none;
+  }
+}

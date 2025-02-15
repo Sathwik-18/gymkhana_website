@@ -1,0 +1,187 @@
+@import url('https://fonts.cdnfonts.com/css/nasalization');
+
+.upcoming-events-container {
+  padding: 40px 20px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.upcoming-events-container h2 {
+  font-family: 'Nasalization Rg', sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #eee;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.events-carousel {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.events-carousel::-webkit-scrollbar {
+  height: 5px;
+  background-color: transparent;
+}
+
+.events-carousel::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.events-carousel::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.events-track {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.event-card {
+  width: 300px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.event-image-wrapper {
+  height: 180px;
+  overflow: hidden;
+}
+
+.event-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease-out;
+  transform-origin: center top;
+}
+
+.event-card:hover .event-image {
+  transform: scale(1.1);
+}
+
+.event-details {
+  padding: 20px;
+}
+
+.event-details h3 {
+  margin-top: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.event-details p {
+  margin: 5px 0;
+  font-size: 0.95em;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+.event-date {
+  font-weight: bold;
+  color: #fff;
+}
+
+.event-time {
+  font-style: italic;
+  color: #eee;
+}
+
+.event-venue {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .upcoming-events-container {
+    padding: 30px 15px;
+  }
+  .upcoming-events-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+  }
+  .events-track {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+  }
+  .event-card {
+    width: 250px;
+  }
+  .event-image-wrapper {
+    height: 150px;
+  }
+  .event-details {
+    padding: 15px;
+  }
+  .event-details h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+  }
+  .event-details p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .upcoming-events-container {
+    padding: 20px 10px;
+  }
+  .upcoming-events-container h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+  .events-carousel {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
+  .events-track {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 25px;
+  }
+  .event-card {
+    width: 95%;
+    max-width: 400px;
+    scroll-snap-align: start;
+  }
+  .event-image-wrapper {
+    height: 200px;
+  }
+  .event-details {
+    padding: 20px;
+    text-align: center;
+  }
+}
